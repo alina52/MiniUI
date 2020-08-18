@@ -1,0 +1,98 @@
+/* ========================================================================
+     Component: cards
+ ========================================================================== */
+.card {
+  margin-bottom: 1.25rem;
+  border-color: transparent;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.card .table {
+  margin-bottom: 0;
+}
+.card .table > thead > tr > th {
+  border-top: 0;
+}
+
+.card.card-transparent {
+  border: 0;
+  background-color: transparent;
+  box-shadow: 0 0 0 #000;
+}
+.card.card-transparent .card-header,
+.card.card-transparent .card-body {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card-flat {
+  margin: 0 !important;
+  border: 0;
+}
+
+.card-columns-2 {
+  column-count: 1;
+}
+@media (min-width: 768px) {
+  .card-columns-2 {
+    column-count: 2;
+  }
+}
+
+.card-header > a[data-tool] {
+  display: inline-block;
+  color: #fff;
+  width: 2em;
+  text-align: center;
+}
+
+.card-default .card-header > a[data-tool] {
+  color: #c1c2c3;
+}
+
+.card-header > .badge.pull-right {
+  margin-top: 3px;
+}
+.card-header > .badge.pull-right + .badge.pull-right {
+  margin-right: 10px;
+}
+
+.card-footer .pagination {
+  margin: 0;
+}
+
+.card-footer .radial-bar {
+  margin-bottom: 0;
+}
+
+.card-footer p {
+  margin-bottom: 0;
+}
+
+.card .card-header {
+  border-bottom: 0;
+  padding: 0.625rem 0.9375rem;
+  background-color: transparent;
+}
+.card .card-header .card-title {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.card .card-header a {
+  text-decoration: none !important;
+}
+.card .card-body {
+  padding: 0.9375rem;
+}
+.card .card-footer {
+  padding: 0.625rem 0.9375rem;
+}
+
+.card-default {
+  border-top-width: 3px;
+  border-color: #cfdbe2;
+}
+.card-default .card-header {
+  background-color: #fff;
+}

@@ -1,0 +1,330 @@
+/* ========================================================================
+     Component: sidebar
+ ========================================================================== */
+.sidebar {
+  height: 100%;
+  padding-bottom: 20px;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.sidebar:after {
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  -webkit-transform: translateZ(0px);
+}
+.sidebar .nav-heading {
+  padding: 12px 15px;
+  color: #919da8;
+  font-size: 13px;
+  letter-spacing: 0.035em;
+  pointer-events: none;
+  cursor: default;
+}
+
+.sidebar-nav {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.sidebar-nav > .nav-heading:first-child {
+  padding-top: 20px;
+}
+.sidebar-nav > li {
+  display: block;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.4s ease;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .sidebar-nav > li {
+    transition: none;
+  }
+}
+.sidebar-nav > li > a,
+.sidebar-nav > li > .nav-item {
+  position: relative;
+  display: block;
+  padding: 12px 24px;
+  color: #515253;
+  letter-spacing: 0.025em;
+  font-weight: normal;
+  cursor: pointer;
+}
+.sidebar-nav > li > a:focus,
+.sidebar-nav > li > a:hover,
+.sidebar-nav > li > .nav-item:focus,
+.sidebar-nav > li > .nav-item:hover {
+  text-decoration: none;
+  outline: none;
+  color: #23b7e5;
+}
+.sidebar-nav > li > a > em,
+.sidebar-nav > li > .nav-item > em {
+  width: 1.8em;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  color: inherits;
+}
+.sidebar-nav > li.active,
+.sidebar-nav > li.active > a,
+.sidebar-nav > li.active > .nav-item,
+.sidebar-nav > li.active .sidebar-nav,
+.sidebar-nav > li.open,
+.sidebar-nav > li.open > a,
+.sidebar-nav > li.open > .nav-item,
+.sidebar-nav > li.open .sidebar-nav {
+  background-color: #fcfcfc;
+  color: #23b7e5;
+}
+.sidebar-nav > li.active > .nav-item > em,
+.sidebar-nav > li.active > a > em,
+.sidebar-nav > li.open > .nav-item > em,
+.sidebar-nav > li.open > a > em {
+  color: #23b7e5;
+}
+.sidebar-nav > li.active {
+  border-left-color: #23b7e5;
+}
+.sidebar-nav .badge {
+  display: block;
+}
+
+@media only screen and (min-width: 1025px) {
+  .sidebar:not(.show-scrollbar) {
+    margin-right: -17px;
+    overflow-y: scroll;
+  }
+}
+
+.sidebar-subnav {
+  background-color: #fff;
+}
+.sidebar-subnav > .sidebar-subnav-header {
+  color: #515253;
+  display: none;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.sidebar-subnav > li {
+  border-left: 0 !important;
+}
+.sidebar-subnav > li > a,
+.sidebar-subnav > li > .nav-item {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  padding-left: 53px;
+  font-weight: normal;
+  background-color: transparent !important;
+  color: #515253;
+}
+.sidebar-subnav > li > a:focus,
+.sidebar-subnav > li > a:hover,
+.sidebar-subnav > li > .nav-item:focus,
+.sidebar-subnav > li > .nav-item:hover {
+  color: #23b7e5;
+}
+.sidebar-subnav > li > a > em,
+.sidebar-subnav > li > .nav-item > em {
+  display: inline-block;
+  width: 1.8em;
+  margin: 0 0 0 -2em;
+}
+.sidebar-subnav > li.active > a,
+.sidebar-subnav > li.active > .nav-item {
+  color: #23b7e5;
+}
+.sidebar-subnav > li.active > a:after,
+.sidebar-subnav > li.active > .nav-item:after {
+  border-color: #23b7e5;
+  background-color: #23b7e5;
+}
+.sidebar-subnav > li .sidebar-nav > li {
+  padding-left: 5px;
+}
+.sidebar-subnav.nav-floating {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin-left: -1px;
+}
+.sidebar-subnav.nav-floating,
+.sidebar-subnav.nav-floating .collapse {
+  height: auto !important;
+  display: block !important;
+  visibility: visible !important;
+}
+.sidebar-subnav.nav-floating > .sidebar-subnav-header {
+  display: block;
+}
+.sidebar-subnav.nav-floating li > a,
+.sidebar-subnav.nav-floating li > .nav-item {
+  padding-left: 20px;
+}
+.sidebar-subnav.nav-floating li > a em,
+.sidebar-subnav.nav-floating li > .nav-item em {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar > .sidebar-nav .badge {
+    margin: 2px 0 0 0;
+  }
+}
+
+.aside-collapsed .sidebar,
+.aside-collapsed-text .sidebar {
+  overflow-x: hidden;
+}
+.aside-collapsed .sidebar > .sidebar-nav .sidebar-nav,
+.aside-collapsed .sidebar > .sidebar-nav > .nav-heading,
+.aside-collapsed .sidebar > .sidebar-nav > li > .nav-item > span,
+.aside-collapsed .sidebar > .sidebar-nav > li > a > span,
+.aside-collapsed-text .sidebar > .sidebar-nav .sidebar-nav,
+.aside-collapsed-text .sidebar > .sidebar-nav > .nav-heading,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > .nav-item > span,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a > span {
+  display: none !important;
+}
+.aside-collapsed .sidebar > .sidebar-nav > li,
+.aside-collapsed-text .sidebar > .sidebar-nav > li {
+  width: 69px;
+}
+.aside-collapsed .sidebar > .sidebar-nav > li > a,
+.aside-collapsed .sidebar > .sidebar-nav > li > .nav-item,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > .nav-item {
+  text-indent: -3px;
+  padding: 20px 0;
+  text-align: center;
+}
+.aside-collapsed .sidebar > .sidebar-nav > li > a > em,
+.aside-collapsed .sidebar > .sidebar-nav > li > .nav-item > em,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a > em,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > .nav-item > em {
+  font-size: 1.6em;
+  width: auto;
+}
+.aside-collapsed .sidebar > .sidebar-nav > li > a:focus,
+.aside-collapsed .sidebar > .sidebar-nav > li > .nav-item:focus,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a:focus,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > .nav-item:focus {
+  background-color: transparent;
+}
+.aside-collapsed .sidebar > .sidebar-nav > li > a:focus > em,
+.aside-collapsed .sidebar > .sidebar-nav > li > .nav-item:focus > em,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a:focus > em,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > .nav-item:focus > em {
+  color: inherit;
+}
+.aside-collapsed .sidebar .sidebar-nav .badge,
+.aside-collapsed-text .sidebar .sidebar-nav .badge {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  text-indent: 0;
+}
+
+.aside-collapsed-text .sidebar > .sidebar-nav > li > .nav-item > span,
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a > span {
+  display: block !important;
+  font-size: 12px;
+}
+
+.aside-collapsed-text .sidebar > .sidebar-nav > li {
+  width: 88px;
+}
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a {
+  padding: 14px 0;
+}
+.aside-collapsed-text .sidebar > .sidebar-nav > li > a > em {
+  font-size: 1.4em;
+}
+
+/* ========================================================================
+       Component: offsidebar
+   ========================================================================== */
+.offsidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 235px;
+  margin-top: 55px;
+  border-left: 1px solid #cccccc;
+  background-color: #fff;
+  color: #656565;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: -1;
+}
+.offsidebar > .list-group {
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-transform: translateZ(0px);
+}
+.offsidebar .progress {
+  border: 0;
+}
+.offsidebar .tab-content {
+  padding: 0;
+  border: 0;
+}
+.offsidebar .nav-tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.offsidebar .nav-tabs > .nav-item > .nav-link {
+  background-color: transparent;
+  border: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  color: #909fa7;
+}
+.offsidebar .nav-tabs > .nav-item > .nav-link.active {
+  color: #5d9cec;
+}
+@media (min-width: 768px) {
+  .offsidebar {
+    margin-top: 55px;
+  }
+}
+
+.offsidebar-open .offsidebar {
+  overflow-y: auto;
+  z-index: 116;
+}
+
+@media (min-width: 768px) {
+  .offsidebar-open {
+    overflow-y: auto;
+  }
+}
+
+.offsidebar {
+  right: -235px;
+}
+
+.no-csstransforms3d .offsidebar-open .offsidebar {
+  right: 0;
+}
+
+/* Transformation ready devices*/
+.csstransforms3d .offsidebar {
+  right: 0;
+  transform: translate3d(235px, 0, 0);
+  transition: transform 0.3s ease, z-index 0s linear 0.3s;
+}
+
+.csstransforms3d .offsidebar-open .offsidebar {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease;
+}
