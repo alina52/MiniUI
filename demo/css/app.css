@@ -370,6 +370,55 @@ _:-ms-lang(x),
 }
 
 /* ========================================================================
+   Component: layout-extra
+ ========================================================================== */
+ .hidden-footer .wrapper .footer-container {
+  display: none;
+}
+
+.layout-h .wrapper .footer-container {
+  margin: 0;
+}
+
+.aside-float .wrapper .footer-container {
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .aside-float .wrapper .section-container {
+    padding-left: 15px;
+  }
+  .aside-float .wrapper .footer-container {
+    left: 15px;
+  }
+}
+.aside-float .wrapper .content-wrapper {
+  border: 0;
+}
+.aside-float .wrapper .content-wrapper .content-heading {
+  padding-top: 30px;
+  border: 0;
+  background-color: transparent;
+}
+.aside-float .wrapper .content-wrapper .unwrap {
+  margin: 0 !important;
+}
+
+.aside-float.aside-toggled .wrapper .aside-container {
+  transition: delay(0.05s);
+}
+.aside-float.aside-toggled .wrapper .aside-container .aside-inner {
+  margin-left: 15px;
+}
+
+.aside-float.aside-toggled .wrapper .section-container {
+  padding-left: 15px;
+}
+
+.aside-float.aside-toggled .wrapper .footer-container {
+  left: 15px;
+}
+/* ========================================================================
    Component: layout-animation.less
  ========================================================================== */
 .wrapper .aside-container {
