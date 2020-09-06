@@ -13,6 +13,14 @@
     transition: none;
   }
 }
+
+.btn-danger {
+  background-color: #ca2420;
+  border-top-color: #ca2420;
+  border-bottom-color: #ca2420;
+  border-right-color: #ca2420;
+  border-left-color: #ca2420;
+}
 .btn.btn-link {
   box-shadow: none;
   border: 0;
