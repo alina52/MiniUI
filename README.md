@@ -1,2 +1,2 @@
-# UI
-This is a repository to store all UI design
+# Mini UI
+This is a repository for UI component framework of PC Web
