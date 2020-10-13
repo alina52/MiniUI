@@ -1,0 +1,38 @@
+.mini-ui-button-theme-color-hover(@color: @default-color,@lighten: 5%, @font-color: #fff){
+      border: 1px solid @color;
+      background-color: lighten(@color, @lighten);
+      color: lighten(@font-color, @lighten);
+      &.mini-ui-button-btn-default {
+        &:active,
+        &:focus {
+          border: 1px solid @primary-color;
+          color: lighten(@primary-color, @lighten);
+        }
+      }
+}
+
+.mini-ui-button-theme-color-hollow(@color,@lighten: 5%){
+    color: @color;
+    background-color: transparent;
+    text-shadow: unset;
+    &.btn-dashed {
+      border: 1px dashed @color;
+    }
+}
+
+.mini-ui-message-color(@color,@lighten: 5%) {
+  color: #fff;
+  background-color: lighten(@color, @lighten);
+  border: 1px solid lighten(@color, @lighten);
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.set-progress-bar-bg(@primaryColor: @primary-color) {
+  background: repeating-linear-gradient(-45deg, @bg-color 25%, @primaryColor 0, @primaryColor 50%, @bg-color 0, @bg-color 75%, @primaryColor 0);
+  background-size: @mini-ui-progress-bg-offset;
+}
