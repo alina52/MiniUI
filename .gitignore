@@ -3,3 +3,5 @@ doczrc.js
 dist
 .docs
 _snapshots_
+lib
+es

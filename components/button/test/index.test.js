@@ -9,25 +9,19 @@ describe("<Button/>", () => {
   it("should render a <Button/> components", () => {
     const wrapper = render(
       <div>
-        <Button>你好</Button>
-        <Button type="primary">你好</Button>
-        <Button type="info">你好</Button>
-        <Button type="warning">你好</Button>
-        <Button type="error">你好</Button>
-        <Button type="success">你好</Button>
-        <Button disabled>你好</Button>
-        <Button loading>加载中..</Button>
+        <Button>Click</Button>
+        <Button type="primary">Click</Button>
+        <Button type="info">Click</Button>
+        <Button type="warning">Click</Button>
+        <Button type="error">Click</Button>
+        <Button type="success">Click</Button>
+        <Button disabled>Click</Button>
+        <Button loading>Loading..</Button>
         <Button block>100%</Button>
-        <Button circle>圆形</Button>
-        <Button type="primary" size="large">
-          大
-        </Button>
-
-        <Button type="info">中</Button>
-
-        <Button type="warning" size="small">
-          小
-        </Button>
+        <Button circle>Circle</Button>
+        <Button type="primary" size="large"> Large </Button>
+        <Button type="info">Middle</Button>
+        <Button type="warning" size="small"> small </Button>
       </div>
     );
     expect(toJson(wrapper)).toMatchSnapshot();
@@ -35,7 +29,7 @@ describe("<Button/>", () => {
 
   it("should can trigger click event", () => {
     const onClick = jest.fn();
-    const wrapper = shallow(<Button onClick={onClick}>点击</Button>);
+    const wrapper = shallow(<Button onClick={onClick}>Click</Button>);
     wrapper.find("button").simulate("click");
     expect(onClick).toHaveBeenCalled();
   });
@@ -44,10 +38,10 @@ describe("<Button/>", () => {
     const onClick = jest.fn();
     const wrapper = shallow(
       <Button onClick={onClick} disabled>
-        不能点击
+        Disable
       </Button>
     );
-    // simulate交互事件
+    // simulate
     wrapper.find("button").simulate("click");
     expect(onClick).not.toHaveBeenCalled();
   });
